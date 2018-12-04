@@ -1,3 +1,4 @@
+require 'anagram'
 
 describe Anagram do
   subject(:anagram) { described_class.new }
