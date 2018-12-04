@@ -23,4 +23,16 @@ describe Anagram do
     end
   end
 
+  describe '#group_anagrams' do
+    array_of_words = ["limes", "miles", "slime", "smile", "bats", "stab", "tabs", "acts"]
+
+    grouped_anagrams = {
+      'eilms' => ["limes", "miles", "slime", "smile"],
+      'abst' => ["bats", "stab", "tabs"],
+      'acst' => ["acts"]
+    }
+
+    expect(anagram.group_anagrams(array_of_words)).to eq(grouped_anagrams)
+  end
+
 end
