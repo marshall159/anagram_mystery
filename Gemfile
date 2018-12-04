@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gem 'rubocop', require: false
 
@@ -7,4 +7,3 @@ group :test do
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
-
