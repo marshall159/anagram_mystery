@@ -7,17 +7,17 @@ describe 'Anagram' do
     given_there_is_a_file_of_anagrams
     when_the_user_enters_a_word
     then_a_list_of_anagrams_of_the_word_are_returned
+  end
 
-    def given_there_is_a_file_of_anagrams
-      @file = 'anagrams.txt'
-    end
+  def given_there_is_a_file_of_anagrams
+    @file = 'anagrams.txt'
+  end
 
-    def when_the_user_enters_a_word
-      @anagrams = anagram('smile', @file)
-    end
+  def when_the_user_enters_a_word
+    @anagrams = anagram('smile', @file)
+  end
 
-    def then_a_list_of_anagrams_of_the_word_are_returned
-      expect(@anagrams).to eq(['limes', 'miles', 'slime'])
-    end
+  def then_a_list_of_anagrams_of_the_word_are_returned
+    expect(@anagrams).to eq(['limes', 'miles', 'slime'])
   end
 end
