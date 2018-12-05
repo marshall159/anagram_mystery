@@ -1,4 +1,9 @@
 class Anagram
+
+  def initialize(file_name)
+    @all_words = read_file(file_name)
+  end
+
   def is_anagram?(word_one, word_two)
     sorted_word_one = sort_word_alphabetically(word_one)
     sorted_word_two = sort_word_alphabetically(word_two)
@@ -9,6 +14,13 @@ class Anagram
   def read_file(file_name)
     words = File.readlines(file_name)
     remove_whitespace(words)
+  end
+
+  def list_anagrams(word)
+    grouped_anagrams = group_anagrams(all_words)
+    sorted_word = sort_word_alphabetically(word)
+
+    grouped_anagrams.fetch(sorted_word, 'Not found')
   end
 
   def group_anagrams(words_array)
@@ -27,6 +39,8 @@ class Anagram
   end
 
   private 
+
+  attr_reader :all_words
 
   def remove_whitespace(words)
     words.map { |word| word.strip }

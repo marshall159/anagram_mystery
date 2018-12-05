@@ -1,7 +1,7 @@
 require 'anagram'
 
 describe Anagram do
-  subject(:anagram) { described_class.new }
+  subject(:anagram) { described_class.new('anagrams.txt') }
 
   describe '#is_anagram?' do
     it 'returns true if two words are anagrams' do
