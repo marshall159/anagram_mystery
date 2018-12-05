@@ -1,6 +1,8 @@
 # Launch from command line to get started 
 
 require_relative('lib/anagram')
+require_relative('lib/anagram_file')
+
 
 found_anagrams = false
 
@@ -12,7 +14,8 @@ while not found_anagrams
     puts "Enter file to search in: "
     file = gets.chomp 
 
-    anagram_finder = Anagram.new(file)
+    anagram_file = AnagramFile.new(file)
+    anagram_finder = Anagram.new(anagram_file)
     anagram_finder.list_anagrams(word)
 
     puts 'Enter "s" to search again or "q" to quit'
