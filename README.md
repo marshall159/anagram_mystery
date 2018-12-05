@@ -4,7 +4,7 @@
 
 An anagram is a word or phrase formed from another by rearranging its letters, eg. SILENT is an anagram of LISTEN
 
-##Task
+## Task
 
 Create a command-line application to determine if a given word has a corresponding anagram given a file with a list of anagrams
 
@@ -22,7 +22,7 @@ So I can solve the mystery of the crime, given the clues left behind
 
 2. Run `bundle` to install dependencies
 
-3. Run `ruby init.rb` to start the applications
+3. Run `ruby init.rb` to start the application
 
 
 ## Tests
