@@ -23,6 +23,15 @@ describe Anagram do
     end
   end
 
+  describe '#list_anagrams' do 
+    it 'takes a word and returns list of all matching anagrams' do
+      word = "limes"
+      list_of_anagrams = ["limes", "miles", "slime", "smile"]
+
+      expect(anagram.list_anagrams(word)).to match_array(list_of_anagrams)
+    end
+  end
+
   describe '#group_anagrams' do
     it 'takes random words and returns a hash of anagrams grouped together' do
       array_of_words = ["limes", "miles", "slime", "smile", "bats", "stab", "tabs", "acts"]
