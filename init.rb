@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Launch from command line to get started 
 
 require_relative('lib/anagram')
@@ -19,10 +17,15 @@ while not found_anagrams
 
     puts 'Enter "s" to search again or "q" to quit'
     command = gets.chomp
-
-    if command.downcase == "q" 
-        found_anagrams = true
-    else
-        puts "Please enter a valid command"
+    
+    while not found_anagrams
+        if command.downcase == "q" 
+            found_anagrams = true
+        elsif command.downcase == "s"
+            break
+        else
+            puts "Please enter a valid command"
+            command = gets.chomp
+        end
     end
 end
