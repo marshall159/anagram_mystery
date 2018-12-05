@@ -1,5 +1,8 @@
 # Anagram Mystery
 
+![Letters](https://images.unsplash.com/photo-1461958508236-9a742665a0d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
+#### Raphael Schaller raphaelphoto.ch
+
 ## Anagrams
 
 An anagram is a word or phrase formed from another by rearranging its letters, eg. SILENT is an anagram of LISTEN
