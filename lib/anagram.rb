@@ -8,6 +8,19 @@ class Anagram
     remove_whitespace(words)
   end
 
+  def group_anagrams(words_array)
+    grouped_anagrams = {}
+    words_array.each do |word|
+      sorted_word = word.split('').sort().join()
+      if grouped_anagrams[sorted_word]
+        grouped_anagrams[sorted_word].push(word)
+      else
+        grouped_anagrams[sorted_word] = [word]
+      end
+    end
+    grouped_anagrams
+  end
+
   private 
 
   def remove_whitespace(words)

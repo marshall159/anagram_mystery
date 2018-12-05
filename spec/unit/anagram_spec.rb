@@ -24,15 +24,17 @@ describe Anagram do
   end
 
   describe '#group_anagrams' do
-    array_of_words = ["limes", "miles", "slime", "smile", "bats", "stab", "tabs", "acts"]
+    it 'takes random words and returns a hash of anagrams grouped together' do
+      array_of_words = ["limes", "miles", "slime", "smile", "bats", "stab", "tabs", "acts"]
 
-    grouped_anagrams = {
-      'eilms' => ["limes", "miles", "slime", "smile"],
-      'abst' => ["bats", "stab", "tabs"],
-      'acst' => ["acts"]
-    }
+      grouped_anagrams = {
+        'eilms' => ["limes", "miles", "slime", "smile"],
+        'abst' => ["bats", "stab", "tabs"],
+        'acst' => ["acts"]
+      }
 
-    expect(anagram.group_anagrams(array_of_words)).to eq(grouped_anagrams)
+      expect(anagram.group_anagrams(array_of_words)).to eq(grouped_anagrams)
+    end
   end
 
 end
