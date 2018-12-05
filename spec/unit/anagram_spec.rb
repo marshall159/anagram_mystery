@@ -30,6 +30,12 @@ describe Anagram do
 
       expect(anagram.list_anagrams(word)).to match_array(list_of_anagrams)
     end
+
+    it 'returns "Not found" if word does not appear in list of anagrams' do
+      word = 'cactus'
+
+      expect(anagram.list_anagrams(word)).to eq("Not found")
+    end
   end
 
   describe '#group_anagrams' do
