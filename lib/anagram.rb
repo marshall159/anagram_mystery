@@ -20,7 +20,7 @@ class Anagram
     grouped_anagrams = group_anagrams(all_words)
     sorted_word = sort_word_alphabetically(word)
 
-    grouped_anagrams.fetch(sorted_word, 'Not found')
+    puts grouped_anagrams.fetch(sorted_word, 'Not found')
   end
 
   def group_anagrams(words_array)
